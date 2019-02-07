@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="JosefinSans-Light.ttf">
+            <string>JosefinSans-Light</string>
+        </array>
+        <array key="JosefinSans-Regular.ttf">
+            <string>JosefinSans-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Info-->
+        <scene sceneID="Z6h-K8-F8P">
+            <objects>
+                <viewController storyboardIdentifier="countryInfo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="a41-7m-iXA" customClass="CountryInfoViewController" customModule="Metide_Sample_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AT1-bx-GtD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" indicatorStyle="white" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BL1-m1-ikW">
+                                <rect key="frame" x="15" y="440" width="345" height="323"/>
+                                <color key="backgroundColor" red="0.98039215686274506" green="0.67843137254901964" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.24313725489999999" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="JosefinSans-Light" family="Josefin Sans" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xE3-pM-Tde">
+                                <rect key="frame" x="15" y="59" width="345" height="20"/>
+                                <fontDescription key="fontDescription" name="JosefinSans-Regular" family="Josefin Sans" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" showsPointsOfInterest="NO" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mGf-5J-nth">
+                                <rect key="frame" x="15" y="87" width="345" height="345"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mGf-5J-nth" secondAttribute="height" multiplier="1:1" id="GGp-lS-Zzs"/>
+                                </constraints>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mGf-5J-nth" firstAttribute="top" secondItem="xE3-pM-Tde" secondAttribute="bottom" constant="8" id="5Ym-oM-szC"/>
+                            <constraint firstItem="5JG-qF-7St" firstAttribute="trailing" secondItem="mGf-5J-nth" secondAttribute="trailing" constant="15" id="Ka7-xC-RuT"/>
+                            <constraint firstItem="5JG-qF-7St" firstAttribute="bottom" secondItem="BL1-m1-ikW" secondAttribute="bottom" constant="15" id="NU7-yJ-0dJ"/>
+                            <constraint firstItem="xE3-pM-Tde" firstAttribute="top" secondItem="5JG-qF-7St" secondAttribute="top" constant="15" id="R8s-ym-ds6"/>
+                            <constraint firstItem="BL1-m1-ikW" firstAttribute="top" secondItem="mGf-5J-nth" secondAttribute="bottom" constant="8" id="SJd-sG-tj7"/>
+                            <constraint firstItem="xE3-pM-Tde" firstAttribute="leading" secondItem="5JG-qF-7St" secondAttribute="leading" constant="15" id="gRF-3w-mdX"/>
+                            <constraint firstItem="BL1-m1-ikW" firstAttribute="leading" secondItem="5JG-qF-7St" secondAttribute="leading" constant="15" id="hX9-Rf-BiO"/>
+                            <constraint firstItem="5JG-qF-7St" firstAttribute="trailing" secondItem="BL1-m1-ikW" secondAttribute="trailing" constant="15" id="kSG-Cc-NZG"/>
+                            <constraint firstItem="mGf-5J-nth" firstAttribute="leading" secondItem="5JG-qF-7St" secondAttribute="leading" constant="15" id="p4r-WT-uAk"/>
+                            <constraint firstItem="5JG-qF-7St" firstAttribute="trailing" secondItem="xE3-pM-Tde" secondAttribute="trailing" constant="15" id="vbt-p5-UOd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5JG-qF-7St"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Info" id="YVu-ce-bjC"/>
+                    <connections>
+                        <outlet property="countryMapView" destination="mGf-5J-nth" id="45X-7u-dZz"/>
+                        <outlet property="noteTextView" destination="BL1-m1-ikW" id="16m-eg-13S"/>
+                        <outlet property="officialNameLabel" destination="xE3-pM-Tde" id="VG5-4k-CHb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cwq-Gm-gSw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="546.39999999999998" y="158.12807881773401"/>
+        </scene>
+    </scenes>
+</document>
