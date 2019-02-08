@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		270DBC7C220C85F2003227BE /* UIImageView extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270DBC7B220C85F1003227BE /* UIImageView extension.swift */; };
 		270DBC81220C8C46003227BE /* CountryInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270DBC80220C8C46003227BE /* CountryInfoViewController.swift */; };
-		270DBC83220C9063003227BE /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 270DBC82220C9063003227BE /* Info.storyboard */; };
 		2710BA7D2209D7EB0019A816 /* JosefinSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2710BA6C2209D7DE0019A816 /* JosefinSans-Bold.ttf */; };
 		2710BA7F2209D7EB0019A816 /* JosefinSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2710BA6E2209D7DE0019A816 /* JosefinSans-Italic.ttf */; };
 		2710BA802209D7EB0019A816 /* JosefinSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2710BA6F2209D7DF0019A816 /* JosefinSans-Light.ttf */; };
@@ -51,7 +50,6 @@
 /* Begin PBXFileReference section */
 		270DBC7B220C85F1003227BE /* UIImageView extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView extension.swift"; sourceTree = "<group>"; };
 		270DBC80220C8C46003227BE /* CountryInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInfoViewController.swift; sourceTree = "<group>"; };
-		270DBC82220C9063003227BE /* Info.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
 		2710BA6A2209D7DE0019A816 /* JosefinSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		2710BA6C2209D7DE0019A816 /* JosefinSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-Bold.ttf"; sourceTree = "<group>"; };
 		2710BA6E2209D7DE0019A816 /* JosefinSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-Italic.ttf"; sourceTree = "<group>"; };
@@ -186,7 +184,6 @@
 				2710BA872209D7F20019A816 /* fonts */,
 				27AAC1D5220891000024C93A /* LaunchScreen.storyboard */,
 				27AAC1CD220890FE0024C93A /* Main.storyboard */,
-				270DBC82220C9063003227BE /* Info.storyboard */,
 				27AAC1D8220891000024C93A /* Info.plist */,
 			);
 			path = "Metide Sample app";
@@ -322,7 +319,6 @@
 				27AAC1D4220891000024C93A /* Assets.xcassets in Resources */,
 				27AAC1CF220890FE0024C93A /* Main.storyboard in Resources */,
 				2710BA822209D7EB0019A816 /* JosefinSans-Regular.ttf in Resources */,
-				270DBC83220C9063003227BE /* Info.storyboard in Resources */,
 				2710BA802209D7EB0019A816 /* JosefinSans-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

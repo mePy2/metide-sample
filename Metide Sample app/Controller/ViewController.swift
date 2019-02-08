@@ -41,6 +41,12 @@ class ViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        if let index = self.countriesTableView.indexPathForSelectedRow{
+            self.countriesTableView.deselectRow(at: index, animated: true)
+        }
+    }
+    
     /// Setup the TableView fetching the countries from the API url.
     @objc func setupCountriesTableView() {
         dataProvider.fetchCountries { (error) in
@@ -62,6 +68,14 @@ class ViewController: UIViewController {
         
         let attributes = [NSAttributedString.Key.font: UIFont(name: "JosefinSans-Bold", size: 34)!, NSAttributedString.Key.foregroundColor: UIColor.white]
         navigationController?.navigationBar.largeTitleTextAttributes = attributes
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? CountryInfoViewController {
+            guard let indexPath = countriesTableView.indexPathForSelectedRow else { return }
+            destination.country = countries[indexPath.row]
+            destination.dataProvider = dataProvider
+        }
     }
     
     private func fetchRecordsForEntity(_ entity: String, inManagedObjectContext managedObjectContext: NSManagedObjectContext, completion: @escaping() -> ()) {
@@ -115,7 +129,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if (indexPath.row % 2 == 0) {
-            cell.backgroundColor = UIColor(red: 249/255, green: 249/255, blue: 249/255, alpha: 1)
+            cell.contentView.backgroundColor = UIColor(red: 249/255, green: 249/255, blue: 249/255, alpha: 1)
         }
     }
     
@@ -123,12 +137,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let cell: UITableViewCell = tableView.cellForRow(at: indexPath)!
         cell.contentView.backgroundColor = UIColor(red: 250/255, green: 173/255, blue: 40/255, alpha: 1)
         
-        let country = countries[indexPath.row]
-        guard let name = country.name,
-            let officialName = country.officialName else {
-                return print("error")
-        }
-        performSegue(withIdentifier: "countryInfo", sender: self)
+        performSegue(withIdentifier: "infoSegue", sender: self)
     }
-    
 }
